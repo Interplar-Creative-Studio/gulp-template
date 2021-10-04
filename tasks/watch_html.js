@@ -1,5 +1,5 @@
-const { watch, parallel, series } = require('gulp');
+const { watch, parallel } = require('gulp');
 
 module.exports = function watchingHTML() {
-	watch('app/views/html/**/*.html', parallel('pug'));
+	watch('app/views/**/*.pug', parallel('pug'));
 };

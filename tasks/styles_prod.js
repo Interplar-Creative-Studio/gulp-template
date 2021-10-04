@@ -24,7 +24,7 @@ module.exports = function styles_prod() {
 			],
 		}),
 		uncss({
-			html: 'app/views/html/**/*.html',
+			html: './build/**/*.html',
 		}),
 	];
 
@@ -40,6 +40,6 @@ module.exports = function styles_prod() {
 				debug: false,
 			}),
 		)
-		.pipe(dest('app/assets/styles/css'))
+		.pipe(dest('./build/assets/css'))
 		.pipe(bs.stream());
 };

@@ -1,5 +1,5 @@
 const { watch, parallel } = require('gulp');
 
-module.exports = function watching() {
-	watch('app/assets/styles/*.+(scss|sass)', parallel('styles'));
+module.exports = function watchingStyles() {
+	watch('app/assets/styles/**/*.scss', parallel('styles'));
 };

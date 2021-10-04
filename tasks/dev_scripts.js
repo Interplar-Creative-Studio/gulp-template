@@ -5,11 +5,11 @@ const map = require('gulp-sourcemaps');
 const bs = require('browser-sync');
 
 module.exports = function dev_js() {
-	return src(['app/scripts/src/**/*.js'])
+	return src(['app/scripts/**/*.js'])
 		.pipe(map.init())
 		.pipe(uglify())
-		.pipe(concat('main.min.js'))
+		.pipe(concat('bundle.min.js'))
 		.pipe(map.write('/sourcemaps/'))
-		.pipe(dest('app/scripts/dist/'))
+		.pipe(dest('./build/assets/scripts'))
 		.pipe(bs.stream());
 };

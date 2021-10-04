@@ -6,7 +6,7 @@ const map = require('gulp-sourcemaps');
 const bs = require('browser-sync');
 
 module.exports = function styles() {
-	return src(['app/assets/styles/**/*.+(scss|sass)', '!app/assets/styles/css/'])
+	return src(['app/assets/styles/**/*.scss', '!app/assets/styles/css/'])
 		.pipe(map.init())
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 		.pipe(
@@ -25,6 +25,6 @@ module.exports = function styles() {
 		)
 		.pipe(concat('styles.min.css'))
 		.pipe(map.write('/sourcemaps/'))
-		.pipe(dest('app/assets/styles/css'))
+		.pipe(dest('./build/assets/css'))
 		.pipe(bs.stream());
 };

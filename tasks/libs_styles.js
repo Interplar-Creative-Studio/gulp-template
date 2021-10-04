@@ -13,7 +13,7 @@ module.exports = function libs_styles(done) {
 			.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 			.pipe(concat('libs.min.css'))
 			.pipe(map.write('/sourcemaps/'))
-			.pipe(dest('app/assets/styles/css/'));
+			.pipe(dest('./build/assets/css'));
 	} else {
 		return done(console.log(chalk.redBright('No added CSS/SCSS/SASS plugins')));
 	}

@@ -4,7 +4,7 @@ const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 
 module.exports = function scripts() {
-	return src(['app/scripts/src/**/*.js'])
+	return src(['app/scripts/**/*.js'])
 		.pipe(uglify())
 		.pipe(
 			babel({
@@ -12,5 +12,5 @@ module.exports = function scripts() {
 			}),
 		)
 		.pipe(concat('bundle.min.js'))
-		.pipe(dest('app/scripts/dist/'));
+		.pipe(dest('./build/assets/scripts'));
 };
