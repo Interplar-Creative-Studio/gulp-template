@@ -70,6 +70,7 @@ README.md
 - Для css нужен autoprefixer, для прода надо еще юзать uncss, csso, critical
 - Babel желателен для js
 - По поводу всех этих плагинов есть информация в статье которую кидал выше
+- В пустые папки можно засунуть .gitkeep (почитай про это, если кратко то этот файл позволяет гиту добавлять пустую папку в репозиторий)
 
 [comment]: <> (Gulp template is a template for web html developers!)
 
