@@ -53,7 +53,7 @@ README.md
 
 Нужна возможность быстрого отключения bootstrap
 
-###Gulp watch
+##Gulp watch
 - `gulp watch` - смотрим за изменением всех файлов
 - `gulp watch:html` - смотрим за изменением pug файлов
 - `gulp watch:css` - смотрим за изменением scss файлов
