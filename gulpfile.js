@@ -24,17 +24,6 @@ exports.libs_scripts = tasks.libs_scripts;
 //* Картинки
 exports.imagemin = tasks.images_rastr;
 
-//* Слежка
-exports.watch = tasks.watch;
-// exports.watch_html = tasks.watch_html;
-// exports.watch_styles = tasks.watch_styles;
-// exports.watch_pages = tasks.watch_pages;
-// exports.watch_scripts = tasks.watch_scripts;
-task('watch:html', parallel([tasks.watch_html, tasks.bs_pug]));
-task('watch:css', parallel([tasks.watch_styles, tasks.bs_pug]));
-task('watch:pages', parallel([tasks.watch_pages, tasks.bs_pug]));
-task('watch:js', parallel([tasks.watch_scripts, tasks.bs_pug]));
-
 //* Компиляция в прод
 // task('compile:prod', async function (done) {
 // 	return (
@@ -84,3 +73,10 @@ exports.compile_dev = parallel(
 
 //* JS файлы в один (по факту два - 1 для библиотек)
 exports.useref = parallel(exports.dev_scripts, exports.libs_scripts);
+
+//* Слежка
+task('watch', series(exports.compile_dev, tasks.bs_pug, tasks.watch))
+task('watch:html', series([exports.compile_dev, tasks.bs_pug, tasks.watch_html]));
+task('watch:css', series([exports.compile_dev, tasks.bs_pug, tasks.watch_styles]));
+task('watch:pages', series([exports.compile_dev, tasks.bs_pug, tasks.watch_pages]));
+task('watch:js', parallel([exports.compile_dev, tasks.watch_scripts, tasks.bs_pug]));
