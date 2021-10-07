@@ -1,12 +1,13 @@
-!assets/fonts
-!assets/img
-!assets/static
-!assets/styles/utils
-!views/includes
-!views/includes/modules
-!views/layout
-!views/pages
-!views/utils
+!assets/fonts/
+!assets/img/
+!assets/static/
+!assets/styles/
+!assets/styles/utils/
+!views/includes/
+!views/includes/modules/
+!views/layout/
+!views/pages/
+!views/utils/
 !scripts/
 
 build/
