@@ -67,11 +67,13 @@ README.md
 
 ## Команды Gulp
 
-<!-- - `gulp watch` - смотрим за изменением всех файлов
+<!-- 
+- `gulp watch` - смотрим за изменением всех файлов
 - `gulp watch:html` - смотрим за изменением pug файлов
 - `gulp watch:css` - смотрим за изменением scss файлов
 - `gulp watch:pages` - смотрим за изменением html+css файлов
-- `gulp watch:js` - смотрим за изменением js файлов -->
+- `gulp watch:js` - смотрим за изменением js файлов 
+-->
 
 - `gulp start` - компилирование dev-версии и локальный сервер
 - `gulp start:clean` - локальный сервер без очищения build директории
@@ -84,6 +86,9 @@ README.md
 - `gulp imagemin` - уменьшаем размер картинок
 
 - `gulp clean` - Очищаем директорию build
+
+## Известные проблемы
+При запуске выходит ошибка от unCss, что не удалось найти js файл, но css компилируется, так что как-нибудь потом пофиксится
 
 [comment]: <> (Gulp template is a template for web html developers!)
 
