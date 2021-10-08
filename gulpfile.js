@@ -12,7 +12,11 @@ const fonts = require('./tasks/fonts');
 const dev = series(pug2html, scss2css, scripts, fonts, images);
 const prod = series(pug2html, scss2css_prod, scripts, fonts, images);
 
-task('start', series(clean, dev, serve));
+task('serve', series(serve));
+
+task('start', series(dev, serve));
+task('start:clean', series(clean, dev, serve));
+
 task('compile:prod', series(clean, prod));
 task('compile:dev', series(clean, dev));
 

@@ -72,11 +72,16 @@ README.md
 - `gulp watch:js` - смотрим за изменением js файлов -->
 
 - `gulp start` - компилирование dev-версии и локальный сервер
+- `gulp start:clean` - локальный сервер без очищения build директории
+
+- `gulp serve` - локальный сервер без очищения build директории и компиляции
 
 - `gulp compile:prod` - полностью компилируем проект
 - `gulp compile:dev` - полностью компилируем проект под разработку (оставляем maps)
 - `gulp useref` - комбинируем js файлы в один
 - `gulp imagemin` - уменьшаем размер картинок
+
+- `gulp clean` - Очищаем директорию build
 
 [comment]: <> (Gulp template is a template for web html developers!)
 
