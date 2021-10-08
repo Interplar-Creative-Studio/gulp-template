@@ -6,7 +6,7 @@ Gulp-template это template для веб frontend html разработчик
 - scss
 - bootstrap
 
-###Структура проекта
+### Структура проекта
 ```
 
 app/ - включает в себя все файлы с версткой
@@ -63,7 +63,7 @@ gulpfile.js
 README.md
 .gitignore
 ```
-##Команды Gulp
+## Команды Gulp
 
 <!-- - `gulp watch` - смотрим за изменением всех файлов
 - `gulp watch:html` - смотрим за изменением pug файлов
