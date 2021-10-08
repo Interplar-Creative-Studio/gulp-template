@@ -1,5 +1,11 @@
 {
 	"name": "gulp-boilerplate",
+	"author": "Interplar",
+	"person": {
+		"name": "Edward Haussauer",
+		"email": "edhaussauer@gmail.com",
+		"url": "https://vk.com/edhauss"
+	},
 	"version": "1.0.0",
 	"description": "Gulp-template это template для веб frontend html разработчиков Тут используются следующие технологии: - pug - scss - bootstrap",
 	"main": "gulpfile.js",
@@ -11,7 +17,6 @@
 		"url": "git+https://github.com/Interplar-Creative-Studio/gulp-template.git"
 	},
 	"keywords": [],
-	"author": "",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/Interplar-Creative-Studio/gulp-template/issues"
