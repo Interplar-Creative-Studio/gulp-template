@@ -18,3 +18,5 @@ task('compile:dev', series(clean, dev));
 
 task('useref', scripts);
 task('imagemin', images);
+
+task('clean', clean);
