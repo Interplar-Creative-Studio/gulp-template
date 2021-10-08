@@ -50,5 +50,8 @@
 		"postcss-uncss": "^0.17.0",
 		"sass": "^1.42.1",
 		"webpack-stream": "^7.0.0"
+	},
+	"dependencies": {
+		"uncss": "^0.17.3"
 	}
 }
