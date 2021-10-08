@@ -1,6 +1,7 @@
 const { task, series, parallel } = require('gulp');
 
 const pug2html = require('./tasks/pug2html');
+const scss2css_prod = require('./tasks/scss2css_prod');
 const scss2css = require('./tasks/scss2css');
 const scripts = require('./tasks/scripts');
 const images = require('./tasks/images');
@@ -9,9 +10,11 @@ const serve = require('./tasks/serve');
 const fonts = require('./tasks/fonts');
 
 const dev = series(pug2html, scss2css, scripts, fonts, images);
+const prod = series(pug2html, scss2css_prod, scripts, fonts, images);
 
-const build = series(clean, dev);
+task('start', series(clean, dev, serve));
+task('compile:prod', series(clean, prod));
+task('compile:dev', series(clean, dev));
 
-module.exports.start = series(build, serve);
-module.exports.dev = dev;
-module.exports.build = build;
+task('useref', scripts);
+task('imagemin', images);

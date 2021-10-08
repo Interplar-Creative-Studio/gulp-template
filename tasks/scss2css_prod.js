@@ -2,15 +2,12 @@ const { src, dest } = require('gulp');
 
 const plumber = require('gulp-plumber');
 const sass = require('gulp-sass')(require('sass'));
-const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const uncss = require('postcss-uncss');
 const concat = require('gulp-concat');
 
-const bs = require('browser-sync');
-
-module.exports = function scss2css() {
+module.exports = function scss2css_prod() {
 	var plugins = [
 		autoprefixer({
 			overrideBrowserslist: ['last 8 versions'],
@@ -31,10 +28,8 @@ module.exports = function scss2css() {
 
 	return src('app/assets/styles/**/*.scss')
 		.pipe(plumber())
-		.pipe(sourcemaps.init())
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 		.pipe(concat('styles.min.css'))
 		.pipe(postcss(plugins))
-		.pipe(sourcemaps.write('/sourcemaps/'))
 		.pipe(dest('build/assets/css'));
 };
