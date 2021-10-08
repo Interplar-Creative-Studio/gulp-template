@@ -10,7 +10,7 @@ const serve = require('./tasks/serve');
 const fonts = require('./tasks/fonts');
 
 const dev = series(pug2html, scss2css, scripts, fonts, images);
-const prod = series(pug2html, scss2css_prod, scripts, fonts, images);
+const prod = series(pug2html, scss2css_prod, scripts, fonts, static, favicons, images);
 
 task('serve', series(serve));
 

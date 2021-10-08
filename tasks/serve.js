@@ -21,6 +21,8 @@ module.exports = function serve(cb) {
 	});
 
 	watch('app/assets/img/*.{gif,png,jpg,svg,webp}', series(images, readyReload));
+	watch('app/assets/img/favicons/*', series(favicons, readyReload));
+	watch('app/assets/static/*', series(static, readyReload));
 	watch(
 		'app/assets/styles/**/*.scss',
 		series(scss2css, (cb) => src('build/assets/css').pipe(server.stream()).on('end', cb)),
