@@ -6,6 +6,10 @@ Gulp-template это template для веб frontend html разработчик
 - scss
 - bootstrap
 
+### Начало
+Для запуска:
+`npm i; npm update; gulp start`
+
 ### Структура проекта
 ```
 
