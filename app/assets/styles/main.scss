@@ -1,11 +1,3 @@
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
-
-body {
-  background: whitesmoke;
-  color: black;
-}
-
-.non-exist-class {
-  background: blue;
-  color: red;
-}
+@import 'utils/reset';
+@import 'utils/libs';
+@import 'utils/fonts';
