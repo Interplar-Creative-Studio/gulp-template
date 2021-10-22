@@ -5,10 +5,7 @@ const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const uncss = require('postcss-uncss');
 const concat = require('gulp-concat');
-
-const bs = require('browser-sync');
 
 module.exports = function scss2css() {
 	var plugins = [
@@ -23,9 +20,6 @@ module.exports = function scss2css() {
 				'Opera >= 12',
 				'Safari >= 6',
 			],
-		}),
-		uncss({
-			html: './build/**/*.html',
 		}),
 	];
 
