@@ -30,7 +30,7 @@ module.exports = function serve(cb) {
 		series(scss2css, (cb) => src('build/assets/css').pipe(server.stream()).on('end', cb)),
 	);
 	watch('app/scripts/**/*.js', series(scripts, readyReload));
-	watch('app/views/pages/**/*.pug', series(pug2html, readyReload));
+	watch('app/views/**/*.pug', series(pug2html, readyReload));
 
 	return cb();
 };
