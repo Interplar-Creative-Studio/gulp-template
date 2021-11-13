@@ -7,7 +7,7 @@ Gulp-template это template для веб frontend html разработчик
 
 ### Начало
 Для запуска:
-Убедитесь в версии nodejs (`nodejs --version`). Шаблон сделать на версии 17
+Убедитесь в версии nodejs (`nodejs --version`). Шаблон сделан на версии 17
 
 1. `npm i`
 2. `npm update`
@@ -15,30 +15,22 @@ Gulp-template это template для веб frontend html разработчик
 
 ### Структура проекта
 ```
-app/ - включает в себя все файлы с версткой
-├── assets/ - тут хранятся условно "статические" файлы. То есть все кроме html, js
-│   ├── fonts/ - все шрифты проекта
-│   ├── img/ - картинки .png .jpg .jpeg .svg .webp .gif
-│   ├── static/ - статичные файлы из тега <head> (robot.txt, ico, sitemap)
-│   └── styles/ - scss файлы
-│       └── utils/
-│   │       ├── _custom.scss - исправляем переменные bootstrap
-│   │       ├── fonts.scss - подключаем шрифты
-│   │       ├── libs.scss - подключаем библиотеки
-│   │       ├── reset.scss - см. ссылку на пример ниже
-│   │       └── ...
+app/
+├── assets/
+│   ├── fonts/ - Шрифты проекта
+│   ├── img/ - Картинки .png .jpg .jpeg .svg .webp .gif
+│   ├── static/ - статичные файлы из тега <head> (robot.txt, manifest.json)
+│   ├─ styles/ - scss файлы<sup>1</sup>
 │   └── main.scss
-├── scripts/ - Директория скриптов
-└── views/ - Место обитания PUG файлов
-    ├── includes/
-    │   └── modules/
-    ├── layouts/
-    ├── pages/
-    └── utils/
+├── scripts/ - .js скрипты
+└── views/ - Место обитания .pug файлов<sup>1</sup>
+
 dist/ - Директория готового билда
-tasks
-gulpfile.js
+tasks/ - Таски для gulp, если не знаете, что делаете - не лезьте!
+gulpfile.js - Если не знаете, что делаете - не лезьте!
 ```
+
+<sup>1</sup> - Если нужны дополнительные директории - создавайте, не стесняйтесь.
 
 ## Команды Gulp
 
