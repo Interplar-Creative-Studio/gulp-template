@@ -4,17 +4,17 @@ Gulp-template это template для веб frontend html разработчик
 Тут используются следующие технологии:
 - pug
 - scss
-- bootstrap
 
 ### Начало
 Для запуска:
+Убедитесь в версии nodejs (`nodejs --version`). Шаблон сделать на версии 17
+
 1. `npm i`
 2. `npm update`
 3. `gulp start`
 
 ### Структура проекта
 ```
-
 app/ - включает в себя все файлы с версткой
 ├── assets/ - тут хранятся условно "статические" файлы. То есть все кроме html, js
 │   ├── fonts/ - все шрифты проекта
@@ -43,19 +43,23 @@ gulpfile.js
 ## Команды Gulp
 
 - `gulp start` - компилирование dev-версии и локальный сервер
-- `gulp start:clean` - локальный сервер с очищением build директории
+- `gulp serve` - локальный сервер без компиляции
 
-- `gulp serve` - локальный сервер без очищения build директории и компиляции
+- `gulp compile:prod` - компилирование prod-версии
+- `gulp compile:dev` - компилирование dev-версии
 
-- `gulp compile:prod` - полностью компилируем проект
-- `gulp compile:dev` - полностью компилируем проект под разработку (оставляем maps)
-- `gulp useref` - комбинируем js файлы в один
-- `gulp imagemin` - уменьшаем размер картинок
+
+- `gulp pages` - компилирование .pug файлов
+
+- `gulp styles:dev` - компилирование dev-версии .scss файлов
+- `gulp styles:prod` - компилирование prod-версии .scss файлов
+
+- `gulp imagemin` - сжатие картинок
+- `gulp scripts` - .js файлы
+- `gulp fonts` - шрифты
+- `gulp static` - статик файлы (robot.txt, manifest.json)
 
 - `gulp clean` - Очищаем директорию build
-
-## Известные проблемы
-При запуске выходит ошибка от unCss, что не удалось найти js файл, но css компилируется, так что как-нибудь потом пофиксится
 
 [comment]: <> (Gulp template is a template for web html developers!)
 
@@ -64,5 +68,3 @@ gulpfile.js
 [comment]: <> (1. pug)
 
 [comment]: <> (2. scss)
-
-[comment]: <> (3. Bootstrap)
