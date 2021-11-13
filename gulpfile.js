@@ -26,6 +26,8 @@ task('static', series(static))
 task('compile:dev', dev)
 task('compile:prod', prod)
 
+task('clean', series(clean))
+
 task('serve', series(serve))
 
 task('start', series(dev, serve))
