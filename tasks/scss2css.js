@@ -6,6 +6,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const concat = require('gulp-concat');
+const cssbeautify = require('gulp-cssbeautify');
 
 module.exports = function scss2css() {
 	var plugins = [
@@ -29,6 +30,7 @@ module.exports = function scss2css() {
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 		.pipe(concat('styles.min.css'))
 		.pipe(postcss(plugins))
+    .pipe(cssbeautify())
 		.pipe(sourcemaps.write('/sourcemaps/'))
 		.pipe(dest('build/assets/css'));
 };
