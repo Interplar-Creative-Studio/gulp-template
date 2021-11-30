@@ -6,7 +6,6 @@ const webpack = require('webpack-stream');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
 const eslint = require('gulp-eslint');
-const jsbeautify = require('gulp-jsbeautifier');
 
 module.exports = function script() {
 	return src('app/scripts/**/*.js')
@@ -37,7 +36,6 @@ module.exports = function script() {
 				plugins: [new CircularDependencyPlugin(), new DuplicatePackageCheckerPlugin()],
 			}),
 		)
-    .pipe(jsbeautify())
 		.pipe(sourcemaps.write('/sourcemaps/'))
 		.pipe(dest('build/assets/scripts'));
 };
