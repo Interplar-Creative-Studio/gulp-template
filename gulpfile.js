@@ -1,8 +1,11 @@
 const { task, series, parallel } = require('gulp');
 
 const pug2html = require('./tasks/pug2html');
-const scss2css_prod = require('./tasks/scss2css_prod');
+const pug2html_prod = require('./tasks/production/pug2html');
+
 const scss2css = require('./tasks/scss2css');
+const scss2css_prod = require('./tasks/production/scss2css');
+
 const scripts = require('./tasks/scripts');
 const fonts = require('./tasks/fonts');
 const static = require('./tasks/static');
@@ -12,7 +15,7 @@ const clean = require('./tasks/clean');
 const serve = require('./tasks/serve');
 
 const dev = series(pug2html, scss2css, scripts, fonts, images);
-const prod = series(pug2html, scss2css_prod, scripts, fonts, static, favicons, images);
+const prod = series(pug2html_prod, scss2css_prod, scripts, fonts, static, favicons, images);
 
 task('serve', series(serve));
 
