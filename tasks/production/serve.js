@@ -26,7 +26,7 @@ module.exports = function serve(bs) {
   watch('app/assets/static/**/*', series(static, readyReload));
   watch('app/assets/styles/**/*.scss', series(scss2css, readyReload));
   watch('app/scripts/**/*.js', series(scripts, readyReload));
-  watch('app/views/pages/**/*.pug', series(pug2html, readyReload));
+  watch('app/views/**/*.pug', series(pug2html, readyReload));
 
   return bs();
 };
