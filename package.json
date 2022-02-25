@@ -4,7 +4,20 @@
 	"description": "Gulp-template это template для веб frontend html разработчиков Тут используются следующие технологии: - pug - scss - bootstrap",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"styles:dev": "gulp styles:dev",
+		"styles:prod": "gulp styles:prod",
+		"pages:dev": "gulp pages:dev",
+		"pages:prod": "gulp pages:prod",
+		"imagemin": "gulp imagemin",
+		"scripts": "gulp scripts",
+		"fonts": "gulp fonts",
+		"static": "gulp static",
+		"compile:dev": "gulp compile:dev",
+		"compile:prod": "gulp compile:prod",
+		"clean": "gulp clean",
+		"serve:dev": "gulp serve:dev",
+		"serve:prod": "gulp serve:prod",
+		"start": "gulp start"
 	},
 	"repository": {
 		"type": "git",
