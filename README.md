@@ -8,7 +8,7 @@ Gulp-template это template для веб frontend html разработчик
 
 ### Начало
 Для запуска:
-`npm i; npm update; gulp start`
+`npm i --legacy-peer-deps; npm update --legacy-peer-deps; gulp start`
 
 ### Структура проекта
 ```
