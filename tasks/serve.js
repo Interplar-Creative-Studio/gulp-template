@@ -3,6 +3,7 @@ const { watch, series, src } = require('gulp');
 const images = require('./images');
 const favicons = require('./favicons');
 const static = require('./static');
+const libs = require('./libs')
 const scss2css = require('./scss2css');
 const scripts = require('./scripts');
 const pug2html = require('./pug2html');
@@ -31,6 +32,6 @@ module.exports = function serve(cb) {
 	);
 	watch('app/scripts/**/*.js', series(scripts, readyReload));
 	watch('app/views/**/*.pug', series(pug2html, readyReload));
-
+	watch('app/assets/libs/*.{css,js,map}', series(libs, readyReload));
 	return cb();
 };
